@@ -1,0 +1,71 @@
+Hi, I'm Vinay Bhupathi
+Q|
+
+I specialize in database administration, performance tuning, and transforming complex data into actionable business insights using tools like Qlik Sense and Grafana.
+
+Get In Touch
+About Me
+With over 5 years of hands-on experience, I am a dedicated and results-oriented data professional. My expertise spans the full spectrum of MS SQL Server administration—from installation and high-availability configuration to performance tuning and 24/7 support. I thrive on ensuring data integrity, security, and optimal performance for critical systems.
+
+Beyond my DBA role, I am passionate about leveraging data to drive business growth. As a Qlik Analyst, I develop end-to-end reporting solutions, provide daily business intelligence updates, and contribute strategic ideas based on data-driven insights. My experience with Grafana for real-time monitoring and alerting further bridges the gap between raw data and immediate, actionable intelligence. I am always eager to tackle new challenges and expand my skills, which has led me to gain experience with MongoDB.
+
+Technical Skills
+Database Administration (MS SQL)
+Installation & Configuration
+Upgradation & Migration
+Backup & Restore
+High Availability
+Performance Tuning
+Security Management
+24/7 Production Support
+Business Intelligence & Reporting
+Qlik Sense Development
+End-to-End Reporting
+Business Logic
+Data Modeling
+Grafana Dashboards
+Real-time Alerting
+Other Database Technologies
+MongoDB Admin
+Database Design
+Query Optimization
+Work Experience
+2021 - Present
+
+Senior SQL DBA / Qlik Analyst
+Future Company Inc.
+Administered and maintained over 50 mission-critical MS SQL Server instances, ensuring 99.9% uptime.
+Developed and automated key business reports in Qlik Sense, reducing manual reporting time by 80%.
+Designed and implemented Grafana dashboards for real-time performance monitoring of database servers.
+Led a successful database upgrade project from SQL Server 2016 to 2019 with zero downtime.
+2018 - 2021
+
+MS SQL Database Administrator
+Previous Tech Solutions
+Managed daily database operations including backups, restores, and user access control.
+Collaborated with development teams to optimize SQL queries, improving application response times by 30%.
+Configured and managed AlwaysOn Availability Groups for high availability and disaster recovery.
+Provided 24/7 on-call support for production database environments.
+Key Projects & Achievements
+Real-Time Infrastructure Monitoring
+Created a comprehensive monitoring solution using Grafana to visualize server health, query performance, and resource utilization in real-time. Configured alerts for proactive issue resolution.
+
+Grafana
+MS SQL Server
+Performance Counters
+Sales Performance Dashboard
+Developed an interactive Qlik Sense dashboard for the sales department, providing insights into KPIs, regional performance, and product trends, which contributed to a 10% increase in sales efficiency.
+
+Qlik Sense
+Data Modeling
+Business Logic
+Database Migration to Cloud
+Contributed to a project migrating on-premise SQL Server databases to a cloud environment, focusing on data integrity, a minimal downtime window, and post-migration performance validation.
+
+MS SQL Server
+Azure SQL
+Data Migration
+Get In Touch
+I'm currently open to new opportunities and collaborations. Feel free to reach out if you have any questions or just want to connect!
+
+vinay.bhupathi@gmail.com
