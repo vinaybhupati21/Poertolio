@@ -14,7 +14,7 @@ import {
   MonitorIcon,
   CheckIcon,
 } from "@/components/DecorativeElements";
-import { Database, TrendingUp, Activity, Mail, Linkedin, Github, ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { Database, TrendingUp, Activity, Mail, Linkedin, Github, ChevronLeft, ChevronRight, Star, Server, BarChart3, Zap, Shield, Code, Cloud } from "lucide-react";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 60 },
@@ -112,13 +112,21 @@ export default function Home() {
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
           <motion.div
-            className="text-xl font-bold"
+            className="flex items-center gap-2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            <span className="text-foreground">Vinay</span>{" "}
-            <span className="text-primary">Bhupathi</span>
+            <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg shadow-md">
+              <Database className="w-6 h-6 text-white" />
+            </div>
+            <div>
+              <div className="text-xl font-bold">
+                <span className="text-foreground">Vinay</span>{" "}
+                <span className="text-primary">Bhupathi</span>
+              </div>
+              <div className="text-[10px] uppercase tracking-wider text-muted-foreground font-medium">SQL DBA & Analytics</div>
+            </div>
           </motion.div>
           <div className="flex items-center gap-4">
             <div className="hidden md:flex items-center gap-6">
@@ -152,8 +160,8 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="inline-block mb-6"
           >
-            <Badge variant="secondary" className="text-sm px-4 py-2" data-testid="badge-greeting">
-              Hi, I'm Vinay Bhupathi
+            <Badge variant="secondary" className="text-sm px-5 py-2.5 rounded-full" data-testid="badge-greeting">
+              Senior MS SQL DBA & Qlik Analyst
             </Badge>
           </motion.div>
 
@@ -164,13 +172,14 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.4 }}
             data-testid="text-hero-title"
           >
-            <span className="text-foreground">Database </span>
+            <span className="text-foreground">Transforming </span>
             <span className="text-primary italic relative inline-block">
-              meets
+              Data
               <WavyUnderline className="absolute -bottom-2 left-0 right-0 w-full h-4 text-accent" />
             </span>
             <br />
-            <span className="text-foreground">Performance</span>
+            <span className="text-foreground">Into </span>
+            <span className="text-secondary italic">Insights</span>
           </motion.h1>
 
           <motion.p
@@ -180,8 +189,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.6 }}
             data-testid="text-hero-subtitle"
           >
-            I specialize in database administration, performance tuning, and transforming complex data
-            into actionable business insights using tools like Qlik Sense and Grafana.
+            Empowering businesses through expert database management, real-time analytics, and data-driven strategies. Specialized in MS SQL Server, Qlik Sense, and enterprise monitoring solutions.
           </motion.p>
 
           <motion.div
@@ -191,11 +199,11 @@ export default function Home() {
           >
             <Button
               size="lg"
-              className="text-lg px-8 py-6 rounded-full"
+              className="text-lg px-10 py-7 rounded-full bg-gradient-to-r from-primary to-secondary hover:shadow-lg hover:scale-105 transition-all duration-300"
               asChild
               data-testid="button-get-in-touch"
             >
-              <a href="#contact">Get In Touch</a>
+              <a href="#contact">Let's Connect</a>
             </Button>
           </motion.div>
 
@@ -224,32 +232,41 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <motion.div variants={fadeInUp}>
-              <Card className="p-8 text-center hover-elevate transition-transform duration-300" data-testid="card-stat-years">
+              <Card className="p-8 text-center hover-elevate transition-transform duration-300 bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20" data-testid="card-stat-years">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-4">
+                  <Shield className="w-8 h-8 text-primary" />
+                </div>
                 <div className="text-6xl md:text-7xl font-black text-primary mb-2" data-testid="text-stat-years">
                   5<span className="text-4xl">+</span>
                 </div>
                 <div className="text-lg font-semibold text-foreground mb-1" data-testid="text-stat-years-label">Years</div>
-                <div className="text-sm text-muted-foreground">of Experience</div>
+                <div className="text-sm text-muted-foreground">Enterprise Experience</div>
               </Card>
             </motion.div>
 
             <motion.div variants={fadeInUp}>
-              <Card className="p-8 text-center hover-elevate transition-transform duration-300" data-testid="card-stat-servers">
+              <Card className="p-8 text-center hover-elevate transition-transform duration-300 bg-gradient-to-br from-secondary/5 to-secondary/10 border-secondary/20" data-testid="card-stat-servers">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-secondary/10 rounded-2xl mb-4">
+                  <Server className="w-8 h-8 text-secondary" />
+                </div>
                 <div className="text-6xl md:text-7xl font-black text-secondary mb-2" data-testid="text-stat-servers">
                   50<span className="text-4xl">+</span>
                 </div>
                 <div className="text-lg font-semibold text-foreground mb-1" data-testid="text-stat-servers-label">Servers</div>
-                <div className="text-sm text-muted-foreground">Managed Daily</div>
+                <div className="text-sm text-muted-foreground">Production Infrastructure</div>
               </Card>
             </motion.div>
 
             <motion.div variants={fadeInUp}>
-              <Card className="p-8 text-center hover-elevate transition-transform duration-300" data-testid="card-stat-uptime">
+              <Card className="p-8 text-center hover-elevate transition-transform duration-300 bg-gradient-to-br from-accent/5 to-accent/10 border-accent/20" data-testid="card-stat-uptime">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-2xl mb-4">
+                  <Zap className="w-8 h-8 text-accent" />
+                </div>
                 <div className="text-6xl md:text-7xl font-black text-accent mb-2" data-testid="text-stat-uptime">
                   99.9<span className="text-4xl">%</span>
                 </div>
                 <div className="text-lg font-semibold text-foreground mb-1" data-testid="text-stat-uptime-label">Uptime</div>
-                <div className="text-sm text-muted-foreground">Maintained</div>
+                <div className="text-sm text-muted-foreground">System Reliability</div>
               </Card>
             </motion.div>
           </motion.div>
@@ -297,39 +314,39 @@ export default function Home() {
             </div>
 
             <div className="relative">
-              <Card className="p-8 space-y-4" data-testid="card-expertise">
+              <Card className="p-8 space-y-6 bg-gradient-to-br from-card to-muted/20" data-testid="card-expertise">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    <Database className="w-6 h-6 text-primary" />
+                  <div className="p-3 bg-gradient-to-br from-primary to-primary/70 rounded-xl shadow-sm">
+                    <Database className="w-7 h-7 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1" data-testid="text-expertise-database-title">Database Expert</h3>
-                    <p className="text-sm text-muted-foreground" data-testid="text-expertise-database-desc">
-                      Master of MS SQL Server with deep expertise in performance optimization
+                    <h3 className="font-bold text-lg mb-1" data-testid="text-expertise-database-title">SQL Server Expert</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed" data-testid="text-expertise-database-desc">
+                      Master of MS SQL Server administration, performance tuning, and high-availability solutions
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-secondary/10 rounded-lg">
-                    <TrendingUp className="w-6 h-6 text-secondary" />
+                  <div className="p-3 bg-gradient-to-br from-secondary to-secondary/70 rounded-xl shadow-sm">
+                    <BarChart3 className="w-7 h-7 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1" data-testid="text-expertise-analytics-title">Analytics Pro</h3>
-                    <p className="text-sm text-muted-foreground" data-testid="text-expertise-analytics-desc">
-                      Transform complex data into clear insights with Qlik Sense
+                    <h3 className="font-bold text-lg mb-1" data-testid="text-expertise-analytics-title">Qlik Analytics Pro</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed" data-testid="text-expertise-analytics-desc">
+                      Transform complex data into actionable insights with Qlik Sense dashboards
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-accent/10 rounded-lg">
-                    <Activity className="w-6 h-6 text-accent" />
+                  <div className="p-3 bg-gradient-to-br from-accent to-accent/70 rounded-xl shadow-sm">
+                    <Activity className="w-7 h-7 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1" data-testid="text-expertise-monitoring-title">Monitoring Specialist</h3>
-                    <p className="text-sm text-muted-foreground" data-testid="text-expertise-monitoring-desc">
-                      Real-time system monitoring and alerting with Grafana
+                    <h3 className="font-bold text-lg mb-1" data-testid="text-expertise-monitoring-title">Real-Time Monitoring</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed" data-testid="text-expertise-monitoring-desc">
+                      Enterprise-grade monitoring and alerting with Grafana for proactive issue resolution
                     </p>
                   </div>
                 </div>
@@ -368,18 +385,18 @@ export default function Home() {
             viewport={{ once: true }}
           >
             {[
-              { icon: DatabaseIcon, title: "Database Admin", color: "primary", skills: ["Installation & Config", "Backup & Restore", "High Availability", "Performance Tuning", "Security Management", "24/7 Support"] },
-              { icon: ChartIcon, title: "Business Intelligence", color: "secondary", skills: ["Qlik Sense Dev", "End-to-End Reporting", "Business Logic", "Data Modeling"] },
-              { icon: MonitorIcon, title: "Monitoring & Alerts", color: "accent", skills: ["Grafana Dashboards", "Real-time Alerting", "Performance Counters"] },
-              { icon: Database, title: "Other Technologies", color: "chart-4", skills: ["MongoDB Admin", "Database Design", "Query Optimization", "Migration"] },
+              { icon: DatabaseIcon, title: "SQL Server DBA", color: "primary", bgGradient: "from-primary/10 to-primary/5", skills: ["Installation & Configuration", "Backup & Disaster Recovery", "AlwaysOn Availability", "Performance Tuning", "Security & Compliance", "24/7 Production Support"] },
+              { icon: ChartIcon, title: "Qlik Analytics", color: "secondary", bgGradient: "from-secondary/10 to-secondary/5", skills: ["Qlik Sense Development", "Interactive Dashboards", "Business Logic", "Data Modeling", "KPI Tracking"] },
+              { icon: MonitorIcon, title: "Monitoring", color: "accent", bgGradient: "from-accent/10 to-accent/5", skills: ["Grafana Dashboards", "Real-time Alerting", "Performance Metrics", "Proactive Monitoring"] },
+              { icon: Database, title: "Cloud & More", color: "chart-4", bgGradient: "from-purple-500/10 to-purple-500/5", skills: ["Azure SQL Database", "MongoDB Administration", "Database Migration", "Query Optimization"] },
             ].map((category, idx) => (
               <motion.div key={idx} variants={fadeInUp}>
-                <Card className="p-6 h-full hover-elevate transition-all duration-300" data-testid={`card-skill-${idx}`}>
-                  <div className={`p-4 bg-${category.color}/10 rounded-lg w-fit mb-4`}>
-                    <category.icon className={`w-12 h-12 text-${category.color}`} />
+                <Card className={`p-6 h-full hover-elevate transition-all duration-300 bg-gradient-to-br ${category.bgGradient} border-${category.color}/20`} data-testid={`card-skill-${idx}`}>
+                  <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-${category.color} to-${category.color}/70 rounded-2xl shadow-md mb-4`}>
+                    <category.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-4" data-testid={`text-skill-title-${idx}`}>{category.title}</h3>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2.5">
                     {category.skills.map((skill, skillIdx) => (
                       <li key={skillIdx} className="text-sm text-muted-foreground flex items-start gap-2" data-testid={`text-skill-${idx}-${skillIdx}`}>
                         <CheckIcon className="w-4 h-4 text-secondary mt-0.5 flex-shrink-0" />
@@ -416,7 +433,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <Card className="p-8 hover-elevate transition-all duration-300" data-testid="card-experience-current">
+              <Card className="p-8 hover-elevate transition-all duration-300 bg-gradient-to-br from-card to-muted/20 border-l-4 border-l-primary" data-testid="card-experience-current">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
                   <div>
                     <h3 className="text-2xl font-bold mb-2" data-testid="text-job-title-current">Senior SQL DBA / Qlik Analyst</h3>
@@ -453,7 +470,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <Card className="p-8 hover-elevate transition-all duration-300" data-testid="card-experience-previous">
+              <Card className="p-8 hover-elevate transition-all duration-300 bg-gradient-to-br from-card to-muted/20 border-l-4 border-l-secondary" data-testid="card-experience-previous">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
                   <div>
                     <h3 className="text-2xl font-bold mb-2" data-testid="text-job-title-previous">MS SQL Database Administrator</h3>
@@ -513,58 +530,58 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <motion.div variants={fadeInUp}>
-              <Card className="p-8 h-full hover-elevate transition-all duration-300" data-testid="card-project-monitoring">
-                <div className="p-4 bg-accent/10 rounded-lg w-fit mb-6">
-                  <Activity className="w-10 h-10 text-accent" />
+              <Card className="p-8 h-full hover-elevate transition-all duration-300 bg-gradient-to-br from-accent/5 to-accent/10 border-accent/20" data-testid="card-project-monitoring">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-accent to-accent/70 rounded-2xl shadow-lg mb-6">
+                  <Activity className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4" data-testid="text-project-monitoring-title">Real-Time Infrastructure Monitoring</h3>
                 <p className="text-muted-foreground mb-6 leading-relaxed" data-testid="text-project-monitoring-desc">
-                  Created a comprehensive monitoring solution using Grafana to visualize server health,
-                  query performance, and resource utilization in real-time. Configured alerts for proactive
-                  issue resolution.
+                  Built comprehensive monitoring dashboards using Grafana to visualize server health,
+                  query performance, and resource utilization. Configured intelligent alerts for proactive
+                  issue resolution and 24/7 uptime.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary" data-testid="badge-tech-grafana">Grafana</Badge>
-                  <Badge variant="secondary" data-testid="badge-tech-sql">MS SQL Server</Badge>
-                  <Badge variant="secondary" data-testid="badge-tech-perf">Performance Counters</Badge>
+                  <Badge variant="outline" className="bg-white/50 dark:bg-black/20" data-testid="badge-tech-grafana">Grafana</Badge>
+                  <Badge variant="outline" className="bg-white/50 dark:bg-black/20" data-testid="badge-tech-sql">MS SQL Server</Badge>
+                  <Badge variant="outline" className="bg-white/50 dark:bg-black/20" data-testid="badge-tech-perf">Performance Metrics</Badge>
                 </div>
               </Card>
             </motion.div>
 
             <motion.div variants={fadeInUp}>
-              <Card className="p-8 h-full hover-elevate transition-all duration-300" data-testid="card-project-dashboard">
-                <div className="p-4 bg-secondary/10 rounded-lg w-fit mb-6">
-                  <TrendingUp className="w-10 h-10 text-secondary" />
+              <Card className="p-8 h-full hover-elevate transition-all duration-300 bg-gradient-to-br from-secondary/5 to-secondary/10 border-secondary/20" data-testid="card-project-dashboard">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-secondary to-secondary/70 rounded-2xl shadow-lg mb-6">
+                  <BarChart3 className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4" data-testid="text-project-dashboard-title">Sales Performance Dashboard</h3>
+                <h3 className="text-2xl font-bold mb-4" data-testid="text-project-dashboard-title">Sales Performance Analytics</h3>
                 <p className="text-muted-foreground mb-6 leading-relaxed" data-testid="text-project-dashboard-desc">
-                  Developed an interactive Qlik Sense dashboard for the sales department, providing insights
-                  into KPIs, regional performance, and product trends, contributing to a 10% increase in
-                  sales efficiency.
+                  Developed interactive Qlik Sense dashboards providing real-time insights into KPIs,
+                  regional performance, and product trends. Enabled data-driven decisions resulting in
+                  10% increase in sales efficiency.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary" data-testid="badge-tech-qlik">Qlik Sense</Badge>
-                  <Badge variant="secondary" data-testid="badge-tech-modeling">Data Modeling</Badge>
-                  <Badge variant="secondary" data-testid="badge-tech-logic">Business Logic</Badge>
+                  <Badge variant="outline" className="bg-white/50 dark:bg-black/20" data-testid="badge-tech-qlik">Qlik Sense</Badge>
+                  <Badge variant="outline" className="bg-white/50 dark:bg-black/20" data-testid="badge-tech-modeling">Data Modeling</Badge>
+                  <Badge variant="outline" className="bg-white/50 dark:bg-black/20" data-testid="badge-tech-logic">Business Intelligence</Badge>
                 </div>
               </Card>
             </motion.div>
 
             <motion.div variants={fadeInUp}>
-              <Card className="p-8 h-full hover-elevate transition-all duration-300" data-testid="card-project-migration">
-                <div className="p-4 bg-primary/10 rounded-lg w-fit mb-6">
-                  <Database className="w-10 h-10 text-primary" />
+              <Card className="p-8 h-full hover-elevate transition-all duration-300 bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20" data-testid="card-project-migration">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary to-primary/70 rounded-2xl shadow-lg mb-6">
+                  <Cloud className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4" data-testid="text-project-migration-title">Database Migration to Cloud</h3>
+                <h3 className="text-2xl font-bold mb-4" data-testid="text-project-migration-title">Cloud Database Migration</h3>
                 <p className="text-muted-foreground mb-6 leading-relaxed" data-testid="text-project-migration-desc">
-                  Contributed to a project migrating on-premise SQL Server databases to a cloud environment,
-                  focusing on data integrity, minimal downtime window, and post-migration performance
-                  validation.
+                  Led successful migration of on-premise SQL Server databases to Azure cloud,
+                  ensuring zero data loss, minimal downtime, and enhanced performance. Implemented
+                  comprehensive testing and rollback procedures.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary" data-testid="badge-tech-mssql">MS SQL Server</Badge>
-                  <Badge variant="secondary" data-testid="badge-tech-azure">Azure SQL</Badge>
-                  <Badge variant="secondary" data-testid="badge-tech-migration">Data Migration</Badge>
+                  <Badge variant="outline" className="bg-white/50 dark:bg-black/20" data-testid="badge-tech-mssql">MS SQL Server</Badge>
+                  <Badge variant="outline" className="bg-white/50 dark:bg-black/20" data-testid="badge-tech-azure">Azure SQL</Badge>
+                  <Badge variant="outline" className="bg-white/50 dark:bg-black/20" data-testid="badge-tech-migration">Zero Downtime</Badge>
                 </div>
               </Card>
             </motion.div>
@@ -648,43 +665,60 @@ export default function Home() {
               have any questions or just want to connect!
             </p>
 
-            <Card className="p-12 mb-8">
-              <div className="flex items-center justify-center gap-3 mb-8">
-                <Mail className="w-6 h-6 text-primary" />
+            <Card className="p-12 mb-8 bg-gradient-to-br from-primary/5 to-secondary/5">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl shadow-lg mx-auto mb-6">
+                <Mail className="w-8 h-8 text-white" />
+              </div>
+              <div className="text-center mb-8">
                 <a
                   href="mailto:vinay.bhupathi@gmail.com"
-                  className="text-2xl md:text-3xl font-bold hover:text-primary transition-colors"
+                  className="text-2xl md:text-3xl font-bold hover:text-primary transition-colors inline-block"
                   data-testid="link-email"
                 >
                   vinay.bhupathi@gmail.com
                 </a>
+                <p className="text-sm text-muted-foreground mt-2">Available for consulting and full-time opportunities</p>
               </div>
 
               <div className="flex justify-center gap-4">
-                <Button variant="outline" size="icon" className="rounded-full" asChild data-testid="button-linkedin">
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="icon" className="rounded-full w-12 h-12 hover:bg-primary hover:text-white hover:border-primary transition-all" asChild data-testid="button-linkedin">
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
                     <Linkedin className="w-5 h-5" />
                   </a>
                 </Button>
-                <Button variant="outline" size="icon" className="rounded-full" asChild data-testid="button-github">
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="icon" className="rounded-full w-12 h-12 hover:bg-primary hover:text-white hover:border-primary transition-all" asChild data-testid="button-github">
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
                     <Github className="w-5 h-5" />
                   </a>
                 </Button>
               </div>
             </Card>
 
-            <Button size="lg" className="text-lg px-8 py-6 rounded-full" asChild data-testid="button-email-cta">
-              <a href="mailto:vinay.bhupathi@gmail.com">Send me an email</a>
+            <Button size="lg" className="text-lg px-10 py-7 rounded-full bg-gradient-to-r from-primary to-secondary hover:shadow-lg hover:scale-105 transition-all duration-300" asChild data-testid="button-email-cta">
+              <a href="mailto:vinay.bhupathi@gmail.com">Send Me a Message</a>
             </Button>
           </motion.div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-border">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center text-muted-foreground">
-          <p>© 2024 Vinay Bhupathi. All rights reserved.</p>
+      <footer className="py-12 border-t border-border bg-muted/30">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="flex items-center gap-2">
+              <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg shadow-md">
+                <Database className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <div className="text-sm font-bold text-foreground">Vinay Bhupathi</div>
+                <div className="text-xs text-muted-foreground">SQL DBA & Analytics Expert</div>
+              </div>
+            </div>
+            <div className="text-center md:text-right">
+              <p className="text-sm text-muted-foreground">© 2024 Vinay Bhupathi. All rights reserved.</p>
+              <p className="text-xs text-muted-foreground mt-1">Empowering businesses through data excellence</p>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
