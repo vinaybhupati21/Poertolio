@@ -123,7 +123,7 @@ export default function Home() {
             <div>
               <div className="text-xl font-bold">
                 <span className="text-foreground">Vinay</span>{" "}
-                <span className="text-primary">Bhupathi</span>
+                <span className="text-primary">Bhupati</span>
               </div>
               <div className="text-[10px] uppercase tracking-wider text-muted-foreground font-medium">SQL DBA & Analytics</div>
             </div>
@@ -161,7 +161,7 @@ export default function Home() {
             className="inline-block mb-6"
           >
             <Badge variant="secondary" className="text-sm px-5 py-2.5 rounded-full" data-testid="badge-greeting">
-              Senior MS SQL DBA & Qlik Analyst
+              Senior MS SQL DBA & Data Analyst
             </Badge>
           </motion.div>
 
@@ -189,7 +189,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.6 }}
             data-testid="text-hero-subtitle"
           >
-            Empowering businesses through expert database management, real-time analytics, and data-driven strategies. Specialized in MS SQL Server, Qlik Sense, and enterprise monitoring solutions.
+            Empowering businesses through expert database management, real-time analytics, and data-driven strategies. Specialized in MS SQL Server, Qlik Sense,Grafan, and enterprise monitoring solutions.
           </motion.p>
 
           <motion.div
@@ -710,12 +710,12 @@ export default function Home() {
                 <Database className="w-6 h-6 text-white" />
               </div>
               <div>
-                <div className="text-sm font-bold text-foreground">Vinay Bhupathi</div>
+                <div className="text-sm font-bold text-foreground">Vinay Bhupati</div>
                 <div className="text-xs text-muted-foreground">SQL DBA & Analytics Expert</div>
               </div>
             </div>
             <div className="text-center md:text-right">
-              <p className="text-sm text-muted-foreground">© 2024 Vinay Bhupathi. All rights reserved.</p>
+              <p className="text-sm text-muted-foreground">© 2024 Vinay Bhupati. All rights reserved.</p>
               <p className="text-xs text-muted-foreground mt-1">Empowering businesses through data excellence</p>
             </div>
           </div>
