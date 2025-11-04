@@ -172,14 +172,14 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.4 }}
             data-testid="text-hero-title"
           >
-            <span className="text-foreground">Transforming </span>
+            <span className="text-foreground">Database </span>
             <span className="text-primary italic relative inline-block">
-              Data
+              meets
               <WavyUnderline className="absolute -bottom-2 left-0 right-0 w-full h-4 text-accent" />
             </span>
             <br />
-            <span className="text-foreground">Into </span>
-            <span className="text-secondary italic">Insights</span>
+            <span className="text-foreground"> </span>
+            <span className="text-secondary italic">Performance</span>
           </motion.h1>
 
           <motion.p
